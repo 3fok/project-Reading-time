@@ -1,0 +1,167 @@
+#content #content-info {
+    max-width: calc(91vw - 60px);
+    padding: 32px;
+    margin: 4vw auto 0 auto;
+    background-color: var(--child-bg-2);
+    color: var(--text-color);
+    border-radius: var(--border);
+    box-shadow: 0px 0px 10px 0px var(--shadow);
+}
+
+#content #content-info h1 {
+    padding-bottom: 20px;
+}
+
+#content #content-info p {
+    padding-left: 10px;
+    font-size: 25px;
+}
+
+#content #content-top {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.content-top-item {
+    margin-top: 2vw;
+    padding: 12px 16px;
+    flex-basis: 43%;
+    box-shadow: 0px 0px 10px 0px var(--shadow);
+}
+
+#content #userInfo {
+    padding: 30px 30px 10px;
+    background-color: var(--child-bg-2);
+    color: var(--text-color);
+    border-radius: var(--border);
+}
+
+#content #userInfo .item-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#content #userInfo .user-info-item {
+    padding: 15px;
+    flex-basis: 30%;
+}
+
+#content #userInfo .item-container .p1 {
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+}
+
+#content #userInfo .item-container .p2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+#content #idiom {
+    padding: 30px 30px 20px;
+    background-color: var(--child-bg-2);
+    color: var(--text-color);
+    border-radius: var(--border);
+}
+
+#content #idiom #idiom_sentence {
+    font-size: 1.7em;
+    font-weight: bold;
+}
+
+#content #idiom #idiom_meaning {
+    font-size: large;
+    padding: 10px;
+}
+
+#content-main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#content-main .tab-content-bt li a {
+    font-weight: bold;
+    color: var(--text-color);
+    background-color: rgba(255, 255, 255, 0.322);
+    margin: 4px 8px;
+    border-radius: var(--border);
+    border-width: 2px;
+}
+
+#content-main .lesson div {
+    padding: 0 20px 10px;
+    font-weight: bold;
+    font-family: var(--text-font);
+}
+
+#content .lesson {
+    margin-top: 2vw;
+    flex-basis: 30%;
+    background-color: var(--child-bg-2);
+    border-radius: var(--border);
+    box-shadow: 10px 10px 5px -3px var(--shadow);
+}
+
+#content .lesson a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+#content .lesson:hover {
+    background-color: var(--hover-bg);
+}
+
+#content .lesson h2 {
+    padding: 15px 20px;
+    font-size: 1.5em;
+}
+
+#content-bot {
+    padding: 1vw;
+}
+
+.tab-content .lesson {
+    width: calc(80vw - 60px);
+}
+
+.tab-content button {
+    margin: 0 20px 15px;
+    font-size: 20px;
+    font-weight: bold;
+    border-color: var(--text-color);
+    border-radius: var(--border);
+    border-width: 3px;
+}
+
+.tab-content button:focus {
+    box-shadow: none;
+}
+
+.tab-content .lesson .collapse p {
+    padding: 8px 28px 28px;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 800px) {
+    #content #content-info {
+        max-width: calc(84vw - 60px);
+        margin: 8vw auto 0 auto;
+    }
+
+    .content-top-item {
+        margin-top: 6vw;
+        flex-basis: 84%;
+    }
+
+    #content .lesson {
+        margin-top: 6vw;
+        flex-basis: 84%;
+        box-shadow: 10px 10px 5px -3px var(--shadow);
+    }
+}

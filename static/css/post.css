@@ -1,0 +1,102 @@
+.cmtContainer {
+    min-width: calc(100vw - 60px);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.cmtBox {
+    width: 86%;
+    min-height: calc(100vh - 8vw);
+    padding: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    background: var(--child-bg-2);
+    border-radius: var(--border);
+    box-shadow: 10px 10px 5px -3px var(--shadow);
+}
+
+.messBox {
+    width: 100%;
+    height: calc(100vh - 12vw - 80px);
+    overflow: auto;
+}
+
+.messBox::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.messBox::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.messBox::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.messLine {
+    margin: 10px;
+    display: flex;
+}
+
+.messLine .avata {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: auto;
+    align-self: flex-end;
+}
+
+.messLine div {
+    margin: 0 4px;
+    border-radius: 10px;
+}
+
+.messLine div h5 {
+    padding-left: 4px;
+}
+
+.messLine div .cmtText {
+    background-color: #aaa;
+    padding: 8px;
+    margin: 4px 0 0;
+    font-size: 20px;
+    box-shadow: 0px 0px 2px 0px var(--shadow);
+}
+
+.cmtBox form p {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 16px 16px 4px;
+}
+
+.cmtBox form div {
+    display: flex;
+}
+
+.cmtBox form #id_body {
+    width: calc(100% - 90px);
+    height: 40px;
+    padding: 6px 10px 4px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.cmtBox form input[type=submit] {
+    width: 60px;
+    height: 40px;
+    margin: 0px 12px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px 0px var(--shadow);
+    cursor: pointer;
+    background: var(--bt-bg);
+}
+
+.cmtBox form input[type=submit]:hover {
+    box-shadow: 0px 0px 10px var(--shadow);
+}

@@ -1,0 +1,23 @@
+{% extends "base_homeSite.html" %}
+
+{% load static %}
+{% block stylecss %}
+<link rel="stylesheet" href="{% static 'css/note-book.css' %}">
+{% endblock stylecss %}
+
+{% block content %}
+
+<div class="noteContainer">
+    <div class="noteBox">
+        <div class="noteScroll">
+            {% for items in post %}
+            <div class="noteLine">
+                <h2> Name read : {{ items.name_read }}</h2>
+                <p> Node : {{ items.note }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

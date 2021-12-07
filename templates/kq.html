@@ -1,0 +1,13 @@
+{% extends "base_signSite.html" %}
+{% load crispy_forms_tags %}
+{% block signSite %}
+<div class="result">
+    <p class="card-title">Score: {{score}}</p>
+    <p class="card-text">Percentage: {{percent}}%</p>
+    <p class="card-text">Time Taken: {{time}} seconds</p>
+    <p class="card-text">Correct answers: {{correct}}</p>
+    <p class="card-text">Incorrect answers: {{wrong}}</p>
+    <p class="card-text">Total questions: {{total}}</p>
+    <a class="btCallAnother" href="{% url 'homePage:homePage' %}">Back to home</a>
+</div>
+{% endblock signSite %}

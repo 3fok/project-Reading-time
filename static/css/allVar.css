@@ -1,0 +1,14 @@
+:root {
+    /* Biến toàn cục, đặt tên để sau dấu -- */
+    --text-color: #1e1a23;
+    --text-font: Arial, Helvetica, sans-serif;
+    --main-bg: #747ef9;
+    --child-bg-0: #4eeaff;
+    --child-bg-1: #c3f8ff;
+    --child-bg-2: #f3ffff;
+    --bt-bg: #92ccfd;
+    --shadow: #666;
+    --hover-bg: #c3c8ff;
+    --scrollbar-color: #454b9b;
+    --border: 10px;
+}

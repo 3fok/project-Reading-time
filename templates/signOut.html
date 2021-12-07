@@ -1,0 +1,12 @@
+{% extends "base_signSite.html" %}
+{% load crispy_forms_tags %}
+{% block signSite %}
+<div>
+    <h2 class="logOutText">You have been signed out</h2>
+    <div class="logOutText">
+        <small class="logInBtText">
+            Already Have An Account? <a class="ml-2" href="{% url 'signSite:signIn' %}">Sign In</a>
+        </small>
+    </div>
+</div>
+{% endblock signSite %}

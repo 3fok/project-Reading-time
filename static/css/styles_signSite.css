@@ -1,0 +1,201 @@
+/* tải tất cả các biến */
+@import "allVar.css";
+
+/* reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--text-font);
+    color: var(--text-color);
+    overflow-x: hidden;
+    background: var(--main-bg);
+}
+
+#main {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+#content {
+    width: 800px;
+    height: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+#idiom {
+    width: 480px;
+    height: 450px;
+    padding: 40px;
+    background-color: var(--child-bg-1);
+    position: absolute;
+    border-start-start-radius: var(--border);
+    border-end-start-radius: var(--border);
+    box-shadow: 0px 0px 10px 0px var(--shadow);
+}
+
+#idiom #idiom_sentence {
+    padding: 30px 50px 20px;
+    font-size: 40px;
+}
+
+#idiom #idiom_meaning {
+    font-weight: bold;
+    padding: 30px 20px 20px;
+    font-size: 23px;
+}
+
+#signSite {
+    font-weight: bold;
+    width: 320px;
+    height: 450px;
+    background-color: var(--child-bg-2);
+    position: absolute;
+    left: 480px;
+    border-start-end-radius: var(--border);
+    border-end-end-radius: var(--border);
+    box-shadow: 0px 0px 10px 0px var(--shadow);
+}
+
+.content-section>form>label {
+    display: flex;
+    margin: 24px 80px 24px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.alert-error li {
+    font-size: 12px;
+    display: flex;
+    text-decoration: none;
+    padding: 0 23px;
+}
+
+.control-label {
+    display: flex;
+    margin: 10px 50px;
+}
+
+input[type=text],
+input[type=password] {
+    font-weight: bold;
+    margin: auto;
+    width: 70%;
+    padding: 12px 20px;
+    display: flex;
+    border: none;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px 0px var(--shadow);
+}
+
+#hint_id_username,
+#error_1_id_username,
+.controls ul,
+.controls strong,
+#hint_id_password2 {
+    display: none;
+}
+
+.form-group .btn-outline-info {
+    font-weight: bolder;
+    font-size: large;
+    display: flex;
+    margin: 30px 15px 5px 80px;
+    padding: 10px 50px;
+    border: none;
+    border-radius: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    background: var(--bt-bg);
+}
+
+.form-group .btn-outline-info:hover {
+    box-shadow: 0px 0px 10px 0px var(--shadow);
+}
+
+.callAnother small {
+    font-size: 16px;
+    display: flex;
+    margin: 20px 15px;
+    padding: 12px 12px;
+    text-align: right;
+
+}
+
+.btCallAnother {
+    color: var(--text-color);
+    font-weight: bold;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    padding-left: 8px;
+}
+
+.btCallAnother:hover {
+    text-shadow: 0px 0px 10px var(--shadow);
+}
+
+.logOutText {
+    display: flex;
+    margin: 24px 80px 24px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.logInBtText small {
+    font-size: 16px;
+    display: flex;
+    margin: 20px 15px;
+    padding: 12px 12px;
+    text-align: right;
+}
+
+.result {
+    font-size: 20px;
+    padding: 20px;
+}
+
+.result .card-title {
+    font-size: 24px;
+}
+
+.result .card-text {
+    margin: 8px 0;
+    font-weight: normal;
+}
+
+.result .btCallAnother {
+    margin: 20px;
+    display: block;
+}
+
+@media only screen and (max-width: 800px) {
+    #content {
+        width: 320px;
+        height: 450px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
+
+    #idiom {
+        display: none;
+    }
+
+    #signSite {
+        position: absolute;
+        left: 0px;
+        border-radius: var(--border);
+        box-shadow: 0px 0px 10px 0px var(--shadow);
+    }
+}

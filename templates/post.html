@@ -1,0 +1,64 @@
+{% extends "base_homeSite.html" %}
+
+{% load static %}
+{% block stylecss %}
+<link rel="stylesheet" href="{% static 'css/post.css' %}">
+{% endblock stylecss %}
+
+{% block content %}
+
+<div class="cmtContainer">
+    <div class="cmtBox">
+        <div id="messBox" class="messBox">
+            {% for comment in postt %}
+            <div class="messLine">
+                <img src="https://i.guim.co.uk/img/media/26392d05302e02f7bf4eb143bb84c8097d09144b/446_167_3683_2210/master/3683.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=49ed3252c0b2ffb49cf8b508892e452d"
+                    alt=" Cat " class="avata" />
+                <div>
+                    <h5 class="cmtAuthName">
+                        {{comment.author}} <br>
+                        <small class="cmtDate">{{comment.date}}</small>
+                    </h5>
+                    <div class="cmtText">
+                        <p>
+                            {{comment.body}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        {% if user.username %}
+        <form action="{% url 'homePage:post' %}" method="POST">
+            {% csrf_token %}
+            <p>Bình luận:</p>
+            <div>
+                {{form.body}}
+                <input type="submit" value="Gửi" />
+            </div>
+        </form>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock content %}
+
+{% block jscript %}
+<script>
+    var scrolled = false;
+
+    function updateScroll() {
+        if (!scrolled) {
+            var element = document.getElementById("messBox");
+            element.scrollTop = element.scrollHeight;
+        }
+    }
+
+    $("#messBox").on('scroll', function () {
+        scrolled = true;
+    });
+</script>
+
+
+{% endblock %}

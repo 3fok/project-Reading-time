@@ -1,0 +1,51 @@
+{% extends "base_homeSite.html" %}
+
+{% load static %}
+{% block stylecss %}
+<link rel="stylesheet" href="{% static 'css/homePage.css' %}">
+{% endblock stylecss %}
+
+{% block content %}
+<div id="content-info">
+    <h1>Reading Time</h1>
+    <p>This is a website where you improve your reading skills through short stories</p>
+    <p>Have fun with the Reading Time</p>
+</div>
+<div id="content-top">
+    <div id="userInfo" class="content-top-item">
+        <h2>{{ request.user }}</h2>
+        <div class="item-container">
+            <div class="user-info-item">
+                <p class="p1">Course</p>
+                <p class="p2">30/100</p>
+            </div>
+            <div class="user-info-item">
+                <p class="p1">Scores</p>
+                <p class="p2">123</p>
+            </div>
+            <div class="user-info-item">
+                <p class="p1">Vocabulary</p>
+                <p class="p2">13</p>
+            </div>
+        </div>
+    </div>
+    <div id="idiom" class="content-top-item">
+        {% include "idiom4Day.html" %}
+    </div>
+</div>
+<div id="content-main">
+    {% for item in object_list %}
+    <div class="lesson">
+        <a href=" {% url 'homePage:readPageSite' item.id %}">
+            <h2>{{ item.name }}</h2>
+            <div>
+                <i class="ti-eye"></i>
+                <label class="viewsLabel"> Views : {{ item.views }}</label>
+            </div>
+        </a>
+    </div>
+    {% endfor %}
+</div>
+<div id="content-bot">
+</div>
+{% endblock content %}

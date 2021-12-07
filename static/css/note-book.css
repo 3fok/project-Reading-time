@@ -1,0 +1,42 @@
+.noteContainer {
+    min-width: calc(100vw - 60px);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.noteBox {
+    width: 86%;
+    min-height: calc(100vh - 8vw);
+    padding: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    background: var(--child-bg-2);
+    border-radius: var(--border);
+    box-shadow: 10px 10px 5px -3px var(--shadow);
+}
+
+.noteScroll {
+    width: 100%;
+    height: calc(100vh - 12vw);
+    overflow: auto;
+}
+
+.noteScroll::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.noteScroll::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.noteScroll::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.noteLine {
+    margin: 0 0 10px 10px;
+}
