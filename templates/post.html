@@ -32,10 +32,10 @@
         {% if user.username %}
         <form action="{% url 'homePage:post' %}" method="POST">
             {% csrf_token %}
-            <p>Bình luận:</p>
+            <p>Comment: </p>
             <div>
                 {{form.body}}
-                <input type="submit" value="Gửi" />
+                <input type="submit" value="Send" />
             </div>
         </form>
         {% endif %}
